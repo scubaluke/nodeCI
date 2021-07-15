@@ -22,7 +22,7 @@ describe('When logged in', async  () => {
         const label = await page.getContentsOf('form label')
         expect(label).toEqual('Blog Title')
     })
-    describe('Aan using valid inputs', async () => {
+    describe('And using valid inputs', async () => {
         beforeEach(async () => {
             await page.type('.title input', 'My Title')
             await page.type('.content input', 'My Content')
@@ -74,9 +74,9 @@ describe('When user is not logged in', async () => {
                 }).then(res  => res.json())
             }
         )
+        expect(result).toEqual({ error: 'You must log in!'})
+
     })
-    console.log(result);
-    expect(result).toEqual({ error: 'Your must log in!'})
 
     test('User cannot get a list of posts', async () => {
         const result = await page.evaluate(
