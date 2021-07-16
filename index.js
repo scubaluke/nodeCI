@@ -10,7 +10,7 @@ require('./services/passport');
 require('./services/cache')
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
-
+console.log(keys, keys.mongoURI);
 const app = express();
 
 app.use(express.json());
