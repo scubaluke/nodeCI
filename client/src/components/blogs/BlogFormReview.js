@@ -64,8 +64,8 @@ class BlogFormReview extends Component {
         <h5>Please confirm your entries</h5>
         {this.renderFields()}
 
-        {/* <h5>Add An Image</h5>
-        <input type="file" accept="image/*" onChange={this.onFileChange.bind(this)} /> */}
+        <h6>Add An Image</h6>
+        <input type="file" accept="image/*" onChange={this.onFileChange.bind(this)}  style={{border: 'none', }} />
 
         {this.renderButtons()}
       </form>
